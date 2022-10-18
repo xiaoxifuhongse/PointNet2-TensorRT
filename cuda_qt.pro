@@ -43,8 +43,8 @@ NVCC_OPTIONS = --use_fast_math
 # include paths
 INCLUDEPATH += $$CUDA_DIR/include
 
-INCLUDEPATH +=  /home/xx/pytorch/torch/include
-INCLUDEPATH += /home/xx/pytorch/torch/include/torch/csrc/api/include  \
+#INCLUDEPATH +=  /home/xx/pytorch/torch/include
+#INCLUDEPATH += /home/xx/pytorch/torch/include/torch/csrc/api/include  \
 INCLUDEPATH += /opt/TensorRT-7.0.0.11/include \
                /opt/TensorRT-7.0.0.11/samples/common \
 
@@ -63,8 +63,8 @@ CUDA_LIBS = -lcuda -lcudart
 CUDA_INC = $$join(INCLUDEPATH,'" -I"','-I"','"')
 #LIBS += $$join(CUDA_LIBS,'.so ', '', '.so')
 LIBS += $$CUDA_LIBS
-LIBS += /home/xx/pytorch/torch/lib/lib*.so \
-        /home/xx/pytorch/torch/lib/lib*.a
+#LIBS += /home/xx/pytorch/torch/lib/lib*.so \
+ #       /home/xx/pytorch/torch/lib/lib*.a
 # Configuration of the Cuda compiler
 CONFIG(debug, debug|release) {
     # Debug mode
